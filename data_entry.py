@@ -31,7 +31,11 @@ def get_category():
     category = input("Enter the category ('I' for Income or 'E' for Expense): ").upper()
     if category in CATEGORIES: 
         return CATEGORIES[category]
+    
+
+    print("Invaild category. Please enter 'I' for Income or 'E' for Expense.")
+    return get_category()
 
 
 def get_description():
-    pass
+    return input("Eenter a description (optional)")
